@@ -40,8 +40,13 @@ const HomeContact = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 md:py-32 bg-slate-900 text-white relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 blur-3xl rounded-full -translate-y-1/2 translate-x-1/4"></div>
+    <section 
+      ref={sectionRef} 
+      className="py-20 md:py-32 text-white relative overflow-hidden bg-fixed bg-cover bg-center"
+      style={{ backgroundImage: `url(${siteData.images.contactHeader})` }}
+    >
+      <div className="absolute inset-0 bg-[#050b14]/90 backdrop-blur-[2px] z-0"></div>
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/10 blur-3xl rounded-full -translate-y-1/2 translate-x-1/4 z-0"></div>
       
       <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
