@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionHeading from "../common/SectionHeading";
 import ImageModal from "../common/ImageModal";
 import { siteData } from "../../data/siteData";
-import aiGalleryImage from "../../assets/images/gallery_ai_1.jpg";
+import shopInteriorImage from "../../assets/images/shop_interior.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,7 +16,7 @@ const HomeGallery = () => {
   imagesRef.current = [];
 
   const displayImages = [
-    aiGalleryImage, 
+    shopInteriorImage, // Real shop photo provided by user
     siteData.gallery[2], // pic3
     siteData.gallery[10], // pic11
     siteData.gallery[12] // pic13
