@@ -100,11 +100,6 @@ const FeaturedServices = ({ limit = 4, hideViewAll = false, withBackground = tru
                 <p className="relative z-10 text-muted leading-relaxed">
                   {service.description}
                 </p>
-
-                {/* Minimalist Learn More arrow */}
-                <div className="relative z-10 mt-6 flex items-center text-sm font-semibold text-primary opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
-                  Learn More <span className="ml-2 font-bold text-lg leading-none">→</span>
-                </div>
                 </div>
               </div>
             );

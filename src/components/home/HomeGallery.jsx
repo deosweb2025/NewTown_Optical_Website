@@ -47,19 +47,13 @@ const HomeGallery = () => {
   return (
     <section ref={sectionRef} className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-        <div className="flex flex-col items-center text-center mb-12 md:mb-16 gap-6">
+        <div className="flex flex-col items-center text-center mb-12 md:mb-16">
           <SectionHeading 
             subtitle="Showcase"
             title={<span className="font-script font-normal tracking-wide text-secondary">Our Latest <span className="text-primary">Collections</span></span>}
-            className="mb-0 md:mb-0"
+            className="mb-0"
             centered={true}
           />
-          <Link
-            to="/gallery"
-            className="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors"
-          >
-            View Full Gallery
-          </Link>
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-4 md:gap-6 auto-rows-[250px] md:auto-rows-auto md:h-[600px]">
@@ -98,7 +92,7 @@ const HomeGallery = () => {
           })}
         </div>
         
-        <div className="mt-10 text-center md:hidden">
+        <div className="mt-12 flex justify-center">
           <Link
             to="/gallery"
             className="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-full font-medium transition-colors"
