@@ -84,7 +84,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-slate-800 pt-8 flex flex-col justify-center items-center gap-2 text-sm text-slate-500 text-center">
           <p>
-            &copy; {new Date().getFullYear()} {siteData.company.name}. All rights reserved.
+            &copy; {new Date().getFullYear()} {siteData.company.name}
           </p>
           <p className="flex items-center text-center">
             Designed & Developed by
