@@ -1,4 +1,5 @@
 import Hero from "../components/home/Hero";
+import BannerCarousel from "../components/home/BannerCarousel";
 import HomeAbout from "../components/home/HomeAbout";
 import FrameShapes from "../components/home/FrameShapes";
 import FeaturedServices from "../components/home/FeaturedServices";
@@ -10,6 +11,7 @@ const Home = () => {
   return (
     <>
       <Hero />
+      <BannerCarousel />
       <HomeAbout />
       <FrameShapes />
       <FeaturedServices />

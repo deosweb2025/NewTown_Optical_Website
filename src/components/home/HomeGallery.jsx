@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionHeading from "../common/SectionHeading";
 import ImageModal from "../common/ImageModal";
 import { siteData } from "../../data/siteData";
-import shopInteriorImage from "../../assets/images/shop_interior.png";
+import shopInteriorImage from "../../assets/images/generated_shop_interior.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -14,10 +14,10 @@ import pic13 from "../assets/images/pic13.jpeg";
 import pic14 from "../assets/images/pic14.jpeg";
 import pic15 from "../assets/images/pic15.jpeg";
 
-import headerAbout from "../assets/images/header_about.jpg";
-import headerServices from "../assets/images/header_services.jpg";
+import headerAbout from "../assets/images/header_about_new.jpg";
+import headerServices from "../assets/images/services_header_eyewear.jpg";
 import headerGallery from "../assets/images/header_gallery.jpg";
-import headerContact from "../assets/images/header_contact.jpg";
+import headerContact from "../assets/images/header_contact_new.jpg";
 
 export const siteData = {
   company: {

@@ -41,7 +41,7 @@ const About = () => {
   return (
     <main>
       <PageHeader 
-        title={<span className="font-script text-white font-normal tracking-wide px-1">About Our Clinic</span>}
+        title={<span className="font-script text-white font-normal tracking-wide px-1">About Our Store</span>}
         subtitle="Our Story"
         image={siteData.images.about}
         layout="left"
@@ -121,23 +121,34 @@ const About = () => {
           </div>
 
           {/* Values */}
-          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-slate-100 pt-16">
-            <div className="flex gap-6 items-start">
-              <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center text-green-600 flex-shrink-0 mt-1">
-                <ShieldCheck size={24} />
-              </div>
-              <div>
-                <h4 className="text-xl font-bold text-secondary mb-2">Uncompromising Quality</h4>
-                <p className="text-slate-600">From our diagnostic equipment to our lenses and frames, we ensure the highest standards in every aspect of our service.</p>
+          <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="group relative p-8 rounded-3xl bg-white border border-slate-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1 hover:border-green-100 transition-all duration-500 overflow-hidden">
+              {/* Subtle background glow on hover */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-green-400/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-x-1/2 -translate-y-1/2"></div>
+              
+              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-50 to-green-100/50 border border-green-100 flex items-center justify-center text-green-600 flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+                  <ShieldCheck size={26} className="drop-shadow-sm" />
+                </div>
+                <div>
+                  <h4 className="text-2xl font-bold text-secondary mb-3 group-hover:text-green-600 transition-colors duration-300">Uncompromising Quality</h4>
+                  <p className="text-slate-600 leading-relaxed text-lg">From our diagnostic equipment to our lenses and frames, we ensure the highest standards in every aspect of our service.</p>
+                </div>
               </div>
             </div>
-            <div className="flex gap-6 items-start">
-              <div className="w-12 h-12 rounded-full bg-rose-50 flex items-center justify-center text-rose-500 flex-shrink-0 mt-1">
-                <Heart size={24} />
-              </div>
-              <div>
-                <h4 className="text-xl font-bold text-secondary mb-2">Compassionate Care</h4>
-                <p className="text-slate-600">We treat every patient like family, taking the time to understand their unique visual needs and lifestyle requirements.</p>
+
+            <div className="group relative p-8 rounded-3xl bg-white border border-slate-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1 hover:border-rose-100 transition-all duration-500 overflow-hidden">
+              {/* Subtle background glow on hover */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-rose-400/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-x-1/2 -translate-y-1/2"></div>
+              
+              <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-50 to-rose-100/50 border border-rose-100 flex items-center justify-center text-rose-500 flex-shrink-0 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500">
+                  <Heart size={26} className="drop-shadow-sm" />
+                </div>
+                <div>
+                  <h4 className="text-2xl font-bold text-secondary mb-3 group-hover:text-rose-500 transition-colors duration-300">Compassionate Care</h4>
+                  <p className="text-slate-600 leading-relaxed text-lg">We treat every patient like family, taking the time to understand their unique visual needs and lifestyle requirements.</p>
+                </div>
               </div>
             </div>
           </div>
