@@ -11,25 +11,38 @@ gsap.registerPlugin(ScrollTrigger);
 const EyeCareProcess = () => {
   const sectionRef = useRef(null);
   const stepsRef = useRef([]);
+  const lineRef = useRef(null);
   // Reset refs on every render
   stepsRef.current = [];
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo(stepsRef.current, 
-        { y: 40, opacity: 0 },
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%",
+        }
+      });
+
+      if (lineRef.current) {
+        tl.fromTo(lineRef.current,
+          { scaleX: 0, transformOrigin: "left center", opacity: 0 },
+          { scaleX: 1, opacity: 1, duration: 1.5, ease: "power2.inOut" }
+        );
+      }
+
+      tl.fromTo(stepsRef.current, 
+        { scale: 0.5, y: 40, opacity: 0 },
         {
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 80%",
-          },
+          scale: 1,
           y: 0,
           opacity: 1,
           duration: 0.8,
-          stagger: 0.2,
-          ease: "power2.out",
+          stagger: 0.25,
+          ease: "back.out(1.7)",
           clearProps: "transform"
-        }
+        },
+        "-=1.2"
       );
     }, sectionRef);
     return () => ctx.revert();
@@ -54,7 +67,7 @@ const EyeCareProcess = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 relative">
           {/* Connecting line for desktop */}
-          <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-primary/10 via-primary/40 to-primary/10 z-0"></div>
+          <div ref={lineRef} className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-primary/10 via-primary/40 to-primary/10 z-0 origin-left"></div>
           
           {steps.map((step, index) => (
             <div 
